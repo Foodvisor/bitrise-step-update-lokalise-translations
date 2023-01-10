@@ -61,22 +61,22 @@ inputs:
       summary: "The path to the destination folder"
       is_expand: true
       is_required: true
-  - format: "$RESPONSE_FORMAT"
+  - format: "$LOKALISE_FORMAT"
     opts:
       title: "File format"
       summary: "The format of the file you want to download"
       is_required: true
-  - locale: "$LOCALE"
+  - locale: "$LOKALISE_LANGS"
     opts:
       title: "File locale"
       summary: "The language of the file you want to download"
       is_required: true
-  - original_filenames:
+  - original_filenames: "$LOKALISE_ORIGINAL_FILENAMES"
     opts:
       title: "Original filenames"
       summary: "Enable to use original filenames / format."
       is_required: false
-  - bundle_structure:
+  - bundle_structure: "$LOKALISE_BUNDLE_STRUCTURE"
     opts:
       title: "Bundle structure"
       summary: "Set the bundle structure"

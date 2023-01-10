@@ -6,9 +6,11 @@ app:
   envs:
   - LOKALISE_TOKEN: $LOKALISE_TOKEN
   - LOKALISE_PROJECT_ID: $LOKALISE_PROJECT_ID
-  - DEST_FILE_PATH: $DEST_FILE_PATH
-  - FORMAT: $RESPONSE_FORMAT
-  - LOCALE: $LOCALE
+  - DEST_LOKALISE_FILES: $DEST_LOKALISE_FILES
+  - LOKALISE_FORMAT: $LOKALISE_FORMAT
+  - LOKALISE_LANGS: $LOKALISE_LANGS
+  - LOKALISE_ORIGINAL_FILENAMES: $LOKALISE_ORIGINAL_FILENAMES
+  - LOKALISE_BUNDLE_STRUCTURE: $LOKALISE_BUNDLE_STRUCTURE
 
 # test workflow.
 # Install bitrise CLI and run `bitrise run test` to test the workflow
@@ -25,8 +27,8 @@ workflows:
         inputs:
         - lokalise_token: $LOKALISE_TOKEN
         - lokalise_project_id: $LOKALISE_PROJECT_ID
-        - file_path: $DEST_FILE_PATH
-        - format: $FORMAT
-        - locale: $LOCALE
-        - original_filenames: $ORIGINAL_FILENAMES
-        - bundle_structure: $BUNDLE_STRUCTURE
+        - file_path: $DEST_LOKALISE_FILES
+        - format: $LOKALISE_FORMAT
+        - locale: $LOKALISE_LANGS
+        - original_filenames: $LOKALISE_ORIGINAL_FILENAMES
+        - bundle_structure: $LOKALISE_BUNDLE_STRUCTURE
