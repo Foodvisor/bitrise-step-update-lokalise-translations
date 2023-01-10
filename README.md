@@ -1,6 +1,6 @@
 # Update lokalise translations
 
-This step downloads the latest translations from the Lokalise project and replace the current ones in app.
+This step downloads the latest translations from the Lokalise project and move them to the right path in project.
 
 
 ## How to use this Step
