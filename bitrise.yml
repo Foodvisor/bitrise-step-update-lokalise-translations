@@ -28,3 +28,5 @@ workflows:
         - file_path: $DEST_FILE_PATH
         - format: $FORMAT
         - locale: $LOCALE
+        - original_filenames: $ORIGINAL_FILENAMES
+        - bundle_structure: $BUNDLE_STRUCTURE

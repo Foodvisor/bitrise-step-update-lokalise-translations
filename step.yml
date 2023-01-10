@@ -71,3 +71,13 @@ inputs:
       title: "File locale"
       summary: "The language of the file you want to download"
       is_required: true
+  - original_filenames:
+    opts:
+      title: "Original filenames"
+      summary: "Enable to use original filenames / format."
+      is_required: false
+  - bundle_structure:
+    opts:
+      title: "Bundle structure"
+      summary: "Set the bundle structure"
+      is_required: false

@@ -9,4 +9,7 @@ lokalise2 \
     --project-id ${lokalise_project_id} \
     --format ${format} \
     --unzip-to ${file_path} \
-    --filter-langs ${locale}
+    --filter-langs ${locale} \
+    --original-filenames=${original_filenames} \
+    --bundle-structure ${bundle_structure}
+    
