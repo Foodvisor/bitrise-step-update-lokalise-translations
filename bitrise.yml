@@ -1,22 +1,30 @@
 format_version: 4
 default_step_lib_source: https://github.com/bitrise-io/bitrise-steplib.git
 
+# Env vars from .bitrise.secrets.yml
 app:
   envs:
   - LOKALISE_TOKEN: $LOKALISE_TOKEN
   - LOKALISE_PROJECT_ID: $LOKALISE_PROJECT_ID
+  - DEST_FILE_PATH: $DEST_FILE_PATH
+  - FORMAT: $RESPONSE_FORMAT
+  - LOCALE: $LOCALE
 
+# test workflow.
+# Install bitrise CLI and run `bitrise run test` to test the workflow
 workflows:
   test:
     steps:
     - path::./:
         title: Step Test
         description: |-
-          The example input has a default value,
-          you can overwrite it if you want to, just like we did below,
+          Step used to test locally.
+          You can overwrite the inputs values if you want to,
           but the step would use the default value specified in the `step.yml`
           file if you would not specify another value.
         inputs:
         - lokalise_token: $LOKALISE_TOKEN
         - lokalise_project_id: $LOKALISE_PROJECT_ID
         - file_path: $DEST_FILE_PATH
+        - format: $FORMAT
+        - locale: $LOCALE

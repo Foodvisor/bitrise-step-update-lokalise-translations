@@ -1,11 +1,4 @@
-#
-# A couple of useful guides & docs:
-#
-# - Main Bitrise CLI docs: https://github.com/bitrise-io/bitrise/tree/master/_docs
-# - Step Development Guideline: https://github.com/bitrise-io/bitrise/blob/master/_docs/step-development-guideline.md
-# - Bitrise.yml format spec: https://github.com/bitrise-io/bitrise/blob/master/_docs/bitrise-yml-format-spec.md
-# - Bitrise docs: http://devcenter.bitrise.io/
-# - Bitrise CLI guides: http://devcenter.bitrise.io/bitrise-cli/
+# Step infos
 
 title: |-
   Download from Lokalise
@@ -13,39 +6,21 @@ summary: |
   Download files from lokalise
 description: |
   Use this step to download files from lokalise to your project
-website: https://github.com/onin-engineering/bitrise-step-download-from-lokalise
-source_code_url: https://github.com/onin-engineering/bitrise-step-download-from-lokalise
-support_url: https://github.com/onin-engineering/bitrise-step-download-from-lokalise/issues
 host_os_tags:
   - osx-10.10
   - ubuntu-16.04
 
-# If this step should be available only for certain project types
-# just uncomment this `project_type_tags` section and include all the
-# project types supported by the step. If the step can be used for all
-# project types then you can just remove this section.
-# If no `project_type_tags` specified (or specified as an empty array)
-# that means the step can be used for any project type.
-# You can find more information about project type tags in the Step Development Guideline:
-# https://github.com/bitrise-io/bitrise/blob/master/_docs/step-development-guideline.md
-#
-# project_type_tags:
-#   - ios
-#   - macos
-#   - android
-#   - xamarin
-#   - react-native
-#   - cordova
-#   - ionic
+# Step category
 
-# Type tags are used for categorizing steps, for easier step discovery in Step Libraries.
-# You can find more information about type tags in the Step Development Guideline:
-# https://github.com/bitrise-io/bitrise/blob/master/_docs/step-development-guideline.md
 type_tags:
   - utility
 
+# Step settings
+
 is_always_run: true
 is_skippable: false
+
+# Step dependencies
 
 deps:
   brew:
@@ -57,39 +32,41 @@ deps:
   - name: wget
   - name: lokalise2
 
+# Step script to execute
 
 toolkit:
   bash:
     entry_file: step.sh
 
+# Required inputs variable (from bitrise.yml)
 
 inputs:
-  - lokalise_token:
+  - lokalise_token: "$LOKALISE_TOKEN"
     opts:
       title: "Lokalise Token"
       summary: "Your CLI/API token for Lokalise"
       is_expand: true
       is_required: true
       is_sensitive: true
-  - lokalise_project_id:
+  - lokalise_project_id: "$LOKALISE_PROJECT_ID"
     opts:
       title: "Lokalise Project ID"
       summary: "Your project ID for Lokalise"
       is_expand: true
       is_required: true
       is_sensitive: true
-  - file_path:
+  - file_path: "$DEST_LOKALISE_FILES"
     opts:
       title: "Path to destination"
       summary: "The path to the destination folder"
       is_expand: true
       is_required: true
-  - format: "strings"
+  - format: "$RESPONSE_FORMAT"
     opts:
       title: "File format"
       summary: "The format of the file you want to download"
       is_required: true
-  - locale: "fr,en,es,de"
+  - locale: "$LOCALE"
     opts:
       title: "File locale"
       summary: "The language of the file you want to download"
