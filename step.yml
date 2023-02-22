@@ -81,3 +81,8 @@ inputs:
       title: "Bundle structure"
       summary: "Set the bundle structure"
       is_required: false
+  - excluded_tags: "$LOKALISE_EXCLUDED_TAGS"
+    opts:
+      title: "Excluded tags"
+      summary: "Specify the tags determining keys to exclude from download"
+      is_required: false

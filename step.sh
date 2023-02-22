@@ -11,5 +11,6 @@ lokalise2 \
     --unzip-to ${file_path} \
     --filter-langs ${locale} \
     --original-filenames=${original_filenames} \
-    --bundle-structure ${bundle_structure}
+    --bundle-structure ${bundle_structure} \
+    --exclude-tags=${excluded_tags}
     

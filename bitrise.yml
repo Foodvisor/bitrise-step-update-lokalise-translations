@@ -11,6 +11,7 @@ app:
   - LOKALISE_LANGS: $LOKALISE_LANGS
   - LOKALISE_ORIGINAL_FILENAMES: $LOKALISE_ORIGINAL_FILENAMES
   - LOKALISE_BUNDLE_STRUCTURE: $LOKALISE_BUNDLE_STRUCTURE
+  - LOKALISE_EXCLUDED_TAGS: $LOKALISE_EXCLUDED_TAGS
 
 # test workflow.
 # Install bitrise CLI and run `bitrise run test` to test the workflow
@@ -32,3 +33,4 @@ workflows:
         - locale: $LOKALISE_LANGS
         - original_filenames: $LOKALISE_ORIGINAL_FILENAMES
         - bundle_structure: $LOKALISE_BUNDLE_STRUCTURE
+        - excluded_tags: $LOKALISE_EXCLUDED_TAGS
