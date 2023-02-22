@@ -25,9 +25,12 @@ Your `.bitrise.secrets.yml` file should look like this:
 
 ```
 envs:
-- LOKALISE_TOKEN: Your lokalise secret token
-- LOKALISE_PROJECT_ID: Your lokalise secret project id
-- DEST_FILE_PATH: The path to where you want to unzip the downloaded files
-- RESPONSE_FORMAT: The format of the downloaded files
-- LOCALE: The languages to download from (ex: "en,de..."). Fetches all available languages if left blank.
+- LOKALISE_TOKEN: Your lokalise secret token.
+- LOKALISE_PROJECT_ID: Your lokalise secret project id.
+- DEST_LOKALISE_FILES: The path to where you want to unzip the downloaded files.
+- LOKALISE_FORMAT: The format of the downloaded files.
+- LOKALISE_LANGS: The languages to download from (ex: "en,de..."). Fetches all available languages if left blank.
+- LOKALISE_ORIGINAL_FILENAMES: Enable to use original filenames/formats. If set to false all keys will be export to a single file per language.
+- LOKALISE_BUNDLE_STRUCTURE: Bundle structure, used when original-filenames set to false. Allowed placeholders are %LANG_ISO%, %LANG_NAME%, %FORMAT% and %PROJECT_NAME%).
+- LOKALISE_EXCLUDED_TAGS: Specify to exclude keys with these tags.
 ```
