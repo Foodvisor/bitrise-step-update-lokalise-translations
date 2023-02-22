@@ -74,7 +74,7 @@ inputs:
   - original_filenames: "$LOKALISE_ORIGINAL_FILENAMES"
     opts:
       title: "Original filenames"
-      summary: "Enable to use original filenames / format."
+      summary: "Enable to use original filenames / format"
       is_required: false
   - bundle_structure: "$LOKALISE_BUNDLE_STRUCTURE"
     opts:
@@ -84,5 +84,5 @@ inputs:
   - excluded_tags: "$LOKALISE_EXCLUDED_TAGS"
     opts:
       title: "Excluded tags"
-      summary: "Specify the tags determining keys to exclude from download"
+      summary: "Specify to exclude keys with these tags"
       is_required: false
