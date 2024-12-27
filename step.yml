@@ -86,3 +86,8 @@ inputs:
       title: "Excluded tags"
       summary: "Specify to exclude keys with these tags"
       is_required: false
+  - filter_data: "$LOKALISE_FILTER_DATA"
+    opts:
+      title: "Filter data"
+      summary: "Allowed values data type"
+      is_required: false
