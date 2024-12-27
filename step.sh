@@ -12,5 +12,6 @@ lokalise2 \
     --filter-langs ${locale} \
     --original-filenames=${original_filenames} \
     --bundle-structure ${bundle_structure} \
-    --exclude-tags=${excluded_tags}
+    --exclude-tags=${excluded_tags} \
+    --filter-data=${filter_data} \
     
