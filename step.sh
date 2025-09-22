@@ -5,7 +5,6 @@ set -ex
 
 lokalise2 \
     file download \
-    --async
     --token ${lokalise_token} \
     --project-id ${lokalise_project_id} \
     --format ${format} \
