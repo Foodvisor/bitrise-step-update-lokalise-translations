@@ -5,6 +5,7 @@ set -ex
 
 lokalise2 \
     file download \
+    --async
     --token ${lokalise_token} \
     --project-id ${lokalise_project_id} \
     --format ${format} \
@@ -14,4 +15,3 @@ lokalise2 \
     --bundle-structure ${bundle_structure} \
     --exclude-tags=${excluded_tags} \
     --filter-data=${filter_data} \
-    
