@@ -13,5 +13,5 @@ lokalise2 \
     --original-filenames=${original_filenames} \
     --bundle-structure ${bundle_structure} \
     --exclude-tags=${excluded_tags} \
+    --async \
     --filter-data=${filter_data} \
-    --async
