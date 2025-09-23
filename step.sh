@@ -3,6 +3,8 @@ set -ex
 
 # For more information, read https://github.com/lokalise/lokalise-cli-2-go/blob/master/docs/lokalise2_file_download.md
 
+echo lokalise2 --version
+
 lokalise2 \
     file download \
     --token ${lokalise_token} \
