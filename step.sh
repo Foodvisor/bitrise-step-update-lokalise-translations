@@ -3,6 +3,7 @@ set -ex
 
 # For more information, read https://github.com/lokalise/lokalise-cli-2-go/blob/master/docs/lokalise2_file_download.md
 
+brew updgrade lokalise2
 version=$(lokalise2 --version)
 echo "$version"
 
