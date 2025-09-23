@@ -23,7 +23,7 @@ is_skippable: false
 # Step dependencies
 
 deps:
-  brew:
+  apt_get:
   - name: git
   - name: wget
   - name: lokalise2
