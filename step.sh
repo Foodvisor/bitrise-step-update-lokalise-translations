@@ -14,3 +14,4 @@ lokalise2 \
     --bundle-structure ${bundle_structure} \
     --exclude-tags=${excluded_tags} \
     --filter-data=${filter_data} \
+    --async
