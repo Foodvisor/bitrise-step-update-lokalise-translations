@@ -3,6 +3,9 @@ set -ex
 
 # For more information, read https://github.com/lokalise/lokalise-cli-2-go/blob/master/docs/lokalise2_file_download.md
 
+curl -L "https://github.com/lokalise/lokalise-cli-2-go/releases/latest/download/lokalise2-darwin-amd64" -o /usr/local/bin/lokalise2
+chmod +x /usr/local/bin/lokalise2
+
 lokalise2 \
     file download \
     --token ${lokalise_token} \
